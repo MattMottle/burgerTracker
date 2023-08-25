@@ -9,6 +9,7 @@ import com.mattmottle.burgertracker.models.Burger;
 import com.mattmottle.burgertracker.repositories.BurgerRepository;
 
 
+
 @Service
 public class BurgerService {
 	
@@ -36,6 +37,12 @@ public class BurgerService {
 	            return null;
 	        }
 	    }
-		
-		
+		//update burger
+		public Burger updateBurger(Burger updatedBurger) {
+			return burgerRepository.save(updatedBurger);
+	}
+		 // deletes burger
+	    public void deleteBurger(Long id) {
+			burgerRepository.deleteById(id);	
+		}	
 }

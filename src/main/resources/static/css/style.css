@@ -23,9 +23,19 @@ textarea {
 h1, h3{
 	color: blue;
 }
-button {
+.button {
 	margin-left: 200px;
 	background-color: blue;
 	color: white;
 	box-shadow: 3px 3px black;
+}
+
+.delete {
+	background: none!important;
+    border: none;
+    padding: 0!important;
+    font-family: arial, sans-serif;
+    color: #3366CC;
+    text-decoration: underline;
+    cursor: pointer;
 }

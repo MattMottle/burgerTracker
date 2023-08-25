@@ -21,6 +21,7 @@
 		      <th scope="col">Name</th>
 		      <th scope="col">Restaurant</th>
 		      <th scope="col">Rating (out of 5)</th>
+		      <th scope="col">Actions</th>
 		    </tr>
 		  </thead>
 		  <tbody>
@@ -29,6 +30,11 @@
 			      <td><a href="http://localhost:8080/${burger.id}"><c:out value="${burger.name}"/></a></td>
 			      <td><c:out value="${burger.restaurant}"/></td>
 			      <td><c:out value="${burger.rating}"/></td>
+			      <td><a href="http://localhost:8080/${burger.id}/edit">Edit</a> | 
+			      <form action="/${burger.id}/delete" method="post">
+			      	<input type="hidden" name="_method" value="delete" />
+			      	<button class="delete">Delete</button>
+			      </form></td>
 			    </tr>
 			</c:forEach>
 		  </tbody>
@@ -56,7 +62,7 @@
 			        <form:label path="notes">Notes</form:label>
 			        <form:textarea path="notes"/>     
 			    </p>    
-			    <button>Submit</button>
+			    <button class="button">Submit</button>
 			</form:form>
 		</div>   
 	</div>
